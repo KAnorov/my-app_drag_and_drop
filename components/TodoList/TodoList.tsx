@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import TodoItem from "@/components/TodoList/TodoItem";
 import styles from "@/components/TodoList/TodoList.module.css";

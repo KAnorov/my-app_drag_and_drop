@@ -5,8 +5,8 @@ interface TodoItemProps {
   item: {
     id: string;
     text: string;
-    status: "new" | "in-progress" | "completed"; // Новый статус задачи
-    checked: boolean; // Сохраняем checked
+    status: "new" | "in-progress" | "completed"; 
+    checked: boolean; 
   };
   onToggle: (id: string) => void;
   onDelete: (id: string) => void;
@@ -24,7 +24,6 @@ export default function TodoItem({ item, onToggle, onDelete, onEdit }: TodoItemP
 
   return (
     <div className={`${styles['todo-item']} ${isEditTask ? styles['editing'] : ''}`}>
-      {/* Чекбокс для отметки выполнения */}
       <input
         type="checkbox"
         checked={item.checked}
@@ -32,7 +31,6 @@ export default function TodoItem({ item, onToggle, onDelete, onEdit }: TodoItemP
         className={styles['todo-checkbox']}
       />
 
-      {/* Режим редактирования */}
       {isEditTask ? (
         <>
           <input
@@ -52,12 +50,9 @@ export default function TodoItem({ item, onToggle, onDelete, onEdit }: TodoItemP
         </>
       ) : (
         <>
-          {/* Текст задачи */}
           <span className={`${styles['todo-text']} ${item.checked ? styles['completed'] : ''}`}>
             {item.text}
           </span>
-
-          {/* Кнопки управления */}
           <div className={styles['todo-button']} >
             <button onClick={() => setIsEditTask(true)} className={styles['todo-edit-button']}>
               🖊
