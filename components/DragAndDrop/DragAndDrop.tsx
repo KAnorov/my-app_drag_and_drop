@@ -11,7 +11,7 @@ export default function DragAndDrop() {
     setCurrentBasket(basketId);
   };
 
-  return (
+  return <>
     <div className={styles.container}>
       <Basket 
         id="basket1" 
@@ -35,7 +35,7 @@ export default function DragAndDrop() {
         setIsDragging={setIsDragging}
       />
     </div>
-  );
+    </>;
 }
 
 function Basket({ id, onDrop, hasBall, isDragging, setIsDragging }: { 
@@ -92,12 +92,14 @@ function Ball({ setIsDragging }: {
     setIsDragging(false);
   };
 
-  return (
+  return <>
+  
     <div 
       className={styles.ball}
       draggable
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
     />
-  );
+ </>;
 }
+
