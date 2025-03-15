@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import styles from "@/components/navigator/Navigation.module.css"; 
 
 const pages = [
-//   { href: "/", title: "Home" },
+  { href: "/", title: "Home" },
   { href: "/DnD", title: "DnD" },
   { href: "/ToDo", title: "ToDo" },
 ];
