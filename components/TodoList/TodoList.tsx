@@ -100,7 +100,7 @@ export default function TodoList() {
                 placeholder="Добавить новое дело"
                 className={styles.todoInput}
             />
-            <div>
+            <div className={styles['todo-buttons']} >
                 <button onClick={addTodo} className={styles.addButton}>
                     ➕
                 </button>

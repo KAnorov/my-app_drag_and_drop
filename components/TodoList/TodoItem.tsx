@@ -58,7 +58,7 @@ export default function TodoItem({ item, onToggle, onDelete, onEdit }: TodoItemP
           </span>
 
           {/* Кнопки управления */}
-          <div className={styles['todo-button']}>
+          <div className={styles['todo-button']} >
             <button onClick={() => setIsEditTask(true)} className={styles['todo-edit-button']}>
               🖊
             </button>
